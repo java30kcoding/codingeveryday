@@ -27,8 +27,8 @@ public class SearchInsert {
             return len;
         }
         while (left < right) {
-            int mid = (left + (right - left) >>> 1);
-            if (nums[mid] > target) {
+            int mid = left + ((right - left) >>> 1);
+            if (nums[mid] < target) {
                 left = mid + 1;
             } else {
                 right = mid;
